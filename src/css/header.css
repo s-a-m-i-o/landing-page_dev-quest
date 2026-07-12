@@ -1,0 +1,106 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+.cabecalho .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.logo .titulo {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff;
+    filter:
+    drop-shadow(0 1px 3px var(--azul))
+    drop-shadow(0 1px 4px var(--azul))
+    ;
+}
+
+.cabecalho .navegacao {
+    position: relative;
+    width: 100%;
+}
+
+.cabecalho .navegacao .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cabecalho .navegacao .menu .item {
+    border: 1px solid var(--rosa-claro);
+    border-radius: 7px;
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all .5s ease;
+}
+
+.cabecalho .navegacao .menu .item:hover {
+    background-color: var(--rosa-claro);
+    color: var(--texto);
+    box-shadow: 0 1px 7px var(--fundo);
+}
+
+@media (min-width:768px) {
+    .cabecalho {
+        padding: 0;
+    }
+    .cabecalho .logo {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo .titulo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    }
+
+    .cabecalho .logo::after {
+        content: '';
+        width: 100px;
+        height: auto;
+    }
+
+    .cabecalho img {
+        width: 150px;
+    }
+
+    .cabecalho .navegacao .menu {
+        flex-direction: row;
+        border-bottom: 2px solid var(--rosa-claro);
+        padding: 20px;
+    }
+
+    .cabecalho .navegacao .menu .item {
+        width: 250px;
+        min-width: 200px;
+        background-color: var(--rosa);
+        color: var(--texto);
+        transition: all .5s ease-out;
+    }
+
+    .cabecalho .navegacao .menu .item:hover {
+        transform: translate(7px, -3px);
+        box-shadow: -3px 4px 9px var(--fundo);
+    }
+}

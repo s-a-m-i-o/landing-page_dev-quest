@@ -10,8 +10,13 @@ html {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
     list-style: none;
+}
+
+img {
+    width: 100%;
 }
